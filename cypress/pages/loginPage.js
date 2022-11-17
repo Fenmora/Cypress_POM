@@ -1,7 +1,5 @@
-// const Page = require("cypress-xpath");
-
 require("cypress-xpath");
-// class loginPage extends Page {
+
 class loginPage {
   elements = {
     usernameDropDown: () => cy.get("#username"),
@@ -10,7 +8,6 @@ class loginPage {
     passwordOption: () => cy.xpath("//div[text()='testingisfun99']"),
     loginBtn: () => cy.get("#login-btn"),
   };
-
   login() {
     this.elements.usernameDropDown().click();
     this.elements.selectUser().click();
